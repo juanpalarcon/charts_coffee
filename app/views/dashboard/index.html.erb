@@ -1,2 +1,24 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Coffee Type</th>
+            <th>Price</th>
+            <th>Date</th>
+            <th>Origin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @sales.each do |s|%>
+        <tr>
+            <td> <%= s.coffee_type %> </td>
+            <td> <%= s.price%> </td>
+            <td> <%= s.date %> </td>
+            <td> <%= s.origin %> </td>
+        </tr>
+        
+        <% end %>
+        
+    </tbody>
+</table>
