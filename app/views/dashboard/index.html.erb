@@ -1,24 +1,12 @@
-
-
-<table>
-    <thead>
-        <tr>
-            <th>Coffee Type</th>
-            <th>Price</th>
-            <th>Date</th>
-            <th>Origin</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @sales.each do |s|%>
-        <tr>
-            <td> <%= s.coffee_type %> </td>
-            <td> <%= s.price%> </td>
-            <td> <%= s.date %> </td>
-            <td> <%= s.origin %> </td>
-        </tr>
-        
-        <% end %>
-        
-    </tbody>
-</table>
+<div class="container my-5">
+  <div>
+    <h2>Ventas mensuales de los ultimos 12 meses</h2>
+    <%= column_chart @sales_grouped_by_month, stacked: true, prefix: "$",
+    thousands: "," %>
+  </div>
+  <div>
+    <h2>Cantidad de ventas mensuales de los ultimos 12 meses</h2>
+    <%= column_chart @sales_grouped_by_number_of_sales, stacked: true, prefix:
+    "Cantidad :", thousands: "," %>
+  </div>
+</div>
