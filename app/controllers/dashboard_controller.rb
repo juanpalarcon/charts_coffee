@@ -9,6 +9,7 @@ class DashboardController < ApplicationController
 
     @sales_grouped_by_month_average = Sale.group_by_month(:date, last: 13 ).order(date: :asc).average(:price)
 
+    @origins_name = Sale.group_by_month(:date, last: 13 ).order(:origin).count()
 
   end
 end

@@ -14,4 +14,9 @@
     <%= column_chart @sales_grouped_by_month_average, stacked: true, prefix:
     "Promedio :", thousands: "," %>
   </div>
+  <div>
+    <h2>origin</h2>
+    <%= pie_chart @origins_name, stacked: true, prefix: "cantidad :", thousands:
+    "," %>
+  </div>
 </div>
