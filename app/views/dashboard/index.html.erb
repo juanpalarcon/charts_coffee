@@ -9,4 +9,9 @@
     <%= column_chart @sales_grouped_by_number_of_sales, stacked: true, prefix:
     "Cantidad :", thousands: "," %>
   </div>
+  <div>
+    <h2>Promedio ventas mensuales de los ultimos 12 meses</h2>
+    <%= column_chart @sales_grouped_by_month_average, stacked: true, prefix:
+    "Promedio :", thousands: "," %>
+  </div>
 </div>
